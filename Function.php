@@ -17,5 +17,7 @@ $emilia -> detailCharacter("Emilia", "Re:Zero - Starting Life in Another World",
 
 // function yang ada thisnya
 $elaina -> sayHello("rika");
+$elaina -> sayHello("yukina");
+
 // function yang ada thisnya
 $emilia -> sayHello(null);
