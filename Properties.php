@@ -2,12 +2,12 @@
 
 require_once "data/Char.php";
 
-$emilia = new Char();
+$emilia = new Char("Emilia", "Re:Zero - Starting Life in Another World");
 $emilia->name = "Emilia";
 $emilia->anime = "Re:Zero - Starting Life in Another World";
 $emilia->partner = "Puck (Roh)";
 
-$elaina = new Char();
+$elaina = new Char("Elaina", "Majo no Tabitabi (The Journey of Elaina)");
 $elaina->name = "Elaina";
 $elaina->anime = "Majo no Tabitabi (The Journey of Elaina)";
 $elaina->partner = "Amnesia";

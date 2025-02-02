@@ -2,10 +2,10 @@
 
 require_once "data/Char.php";
 
-$emilia = new Char(); //membuat object emilia
+$emilia = new Char("Emilia", "Re:Zero - Starting Life in Another World"); //membuat object emilia
 $emilia->name = "emilia";
 
-$elaina = new Char(); //membuat object elaina
+$elaina = new Char("Elaina", "Majo no Tabitabi (The Journey of Elaina)"); //membuat object elaina
 $elaina->name = "elaina";
 
 // mengakses function yang mengembalikan value didalam object
