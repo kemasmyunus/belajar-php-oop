@@ -21,5 +21,12 @@ class SohokuHighSchool{
 }
 
 function sayHelloJitenshaBu(JitenshaBu $jitenshabu){
-    echo "halo semuanya, kami adalah $jitenshabu->kategori".PHP_EOL;
+    // kalau object kita bisa menggunakan instanceof untuk pengecekannya
+    if($jitenshabu instanceof Climber){
+        echo "halo semuanya, kami adalah Climber $jitenshabu->kategori".PHP_EOL;
+    }elseif($jitenshabu instanceof Sprinter){
+        echo "halo semuanya, kami adalah Sprinter $jitenshabu->kategori".PHP_EOL;
+    }elseif($jitenshabu instanceof JitenshaBu){
+        echo "halo semuanya, kami adalah $jitenshabu->kategori".PHP_EOL;
+    }
 }
