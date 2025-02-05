@@ -3,7 +3,7 @@
 class Buchou{
     var string $nama;
     var string $kelas;
-
+    var string $title;
     // void untuk menandakan bahwa suatu function tidak mengembalikan nilai
     function sayHello(string $name): string {
         // $name mengambil nilai yang dimasukkan di function
@@ -11,7 +11,10 @@ class Buchou{
         $kalimat = "Konnichiwa, minna-san! Watashi no namae wa {$this->nama} desu, watashiwa adalah buchou di koko desu, watashi kelas {$this->kelas} desu. Yoroshiku onegaishimasu, {$name}.\n";
         return $kalimat;
     }
-    
+    public function __construct(string $name = "", string $title = "buchou"){
+        $this->tittile = $title;
+        $this->name = $name;
+    }
 }
 
 class Fukubuhcou extends Buchou{
@@ -32,4 +35,9 @@ class Fukubuhcou extends Buchou{
         return parent::sayHello($name);
     }
     
+    public function __construct(string $name =""){
+        // tidak wajib, tapi direkomendasikan memanggil constructor di class parent
+        // agar code yang dieksekusi pada construct parent juga bisa dieksekusi di class child
+        parent::__construct($name, "Fuku Buchou");
+    }
 }

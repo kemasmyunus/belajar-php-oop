@@ -11,5 +11,5 @@ $kumiko->kelas = "3";
 $suichi->nama = "Tsukamoto Suichi";
 $suichi->kelas = "3";
 
-$kumiko->sayHello("kanade chan");
-$suichi->sayHello("kanade chan");
+echo $kumiko->sayHello("kanade chan");
+echo $suichi->sayHello("kanade chan");
