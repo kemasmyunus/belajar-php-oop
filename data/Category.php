@@ -12,11 +12,11 @@ class Category{
         $this->name = $name;
     }
 
-    public function getExpensive(): bool{
+    public function isExpensive(): bool{
         return $this->expensive;
     }
 
-    public function setExpensive(bool $expensive): voic{
+    public function setExpensive(bool $expensive): void{
         $this->expensive = $expensive;
     }
 }
