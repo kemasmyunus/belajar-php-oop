@@ -9,7 +9,9 @@ class Category{
     }
 
     public function setName(string $name): void{
-        $this->name = $name;
+        if(trim($name) != ""){
+            $this->name = $name;
+        }
     }
 
     public function isExpensive(): bool{
