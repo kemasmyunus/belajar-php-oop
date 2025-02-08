@@ -46,7 +46,8 @@ class ParentPerson{
  * function yang ada di ChlildClass
  * 
  */
-class Person extends ParentPerson{
+
+ trait All{
     //trait visibility override
     //kita bisa mengatur visibility function yang ada di dalam trait
     use SayGoodBye, SayHello, HasName, CanRun{
@@ -57,6 +58,9 @@ class Person extends ParentPerson{
          *  */ 
         
     }
+ }
+class Person extends ParentPerson{
+    use All;
 
     public function run():void{
         echo "Person {$this->name} is running".PHP_EOL;
