@@ -11,4 +11,8 @@ class MahouTsukai {
     public function __clone(){
         unset($this->coba);
     }
+
+    public function __toString(){
+        return "Mahou Tsukai wa namae wa $this->name desu, kore wa mahou wa $this->maho desu, soshite $this->toshi sai desu.";
+    }
 }
