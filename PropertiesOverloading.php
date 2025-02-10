@@ -12,10 +12,12 @@ Class Zero{
         $this->properties[$name] = $value;
     }
 
+    // isset untuk mengecek apakah sudah diset berdasarkan properties namenya
     public function __isset($name){
         return isset($this->properties[$name]);
     }
 
+    // unset untuk meng unset berdasarkan properties name
     public function __unset($name){
         unset($this->properties[$name]);
     }
