@@ -2,10 +2,12 @@
 
 Class Zero{
     private array $properties = [];
+    // get untuk mengambil data berdasarkan properties namenye
     public function __get($name){
         return $this->properties[$name];
     }
 
+    // set untuk merubah data berdasarkan properties namenya
     public function __set($name, $value){
         $this->properties[$name] = $value;
     }
