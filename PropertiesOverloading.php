@@ -3,25 +3,27 @@
 Class Zero{
     private array $properties = [];
     public function __get($name){
-        return "halo $this->properties[$name]";
+        return $this->properties[$name];
     }
 
     public function __set($name, $value){
-        echo "coba saja dulu {$name}nya, $value";
+        $this->properties[$name] = $value;
     }
 
     public function __isset($name){
-        echo "isset";
-        return false;
+        return isset($this->properties[$name]);
     }
 
     public function __unset($name){
-        echo "unset";
+        unset($this->properties[$name]);
     }
 }
 
-$zero = new Zero();
-$yaya = $zero->kita="raka";
-$ye = $zero->haha="kaka";
 
-echo $yaya.$ye.PHP_EOL;
+$zero = new Zero();
+$zero->firstName = "kousaka";
+$zero->lastName = "reina";
+
+echo "Fist Name = $zero->firstName".PHP_EOL;
+
+echo "Last Name = $zero->lastName".PHP_EOL;
