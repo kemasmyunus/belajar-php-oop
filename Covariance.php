@@ -1,9 +1,10 @@
 <?php
-
 include "data/Guild.php";
 
-$kazumaparty = new \Data\KazumaParty();
-$kazumaparty->quest("haha");
+$kazuma = new \Data\KazumaParty();
+$kazumaparty = $kazuma->quest("kazuma");
+$kazumaparty->eat(new \Data\Food());
 
-$meguminparty = new \Data\MeguminParty();
-$meguminparty->quest("caca");
+$megumin = new \Data\MeguminParty();
+$meguminparty = $megumin->quest("megumin");
+$meguminparty->eat(new \Data\KazumaFood());
