@@ -21,6 +21,16 @@ Class Zero{
     public function __unset($name){
         unset($this->properties[$name]);
     }
+
+    public function __call($name, $arguments){
+        $join = join(",", $arguments);
+        echo "call function $name with argument $join".PHP_EOL;
+    }
+
+    public static function __callStatic($name, $arguments){
+        $join = join(",", $arguments);
+        echo "call static function $name with argument $join".PHP_EOL;
+    }
 }
 
 
@@ -31,3 +41,6 @@ $zero->lastName = "reina";
 echo "Fist Name = $zero->firstName".PHP_EOL;
 
 echo "Last Name = $zero->lastName".PHP_EOL;
+
+$zero->mahou("kita", "ragu");
+Zero::mahou("kita", "ragu");
