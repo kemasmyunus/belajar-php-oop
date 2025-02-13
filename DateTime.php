@@ -8,4 +8,6 @@ $dateTime->add(new DateInterval("P1Y"));
 $minusOneMonth = new DateInterval("P1M");
 $minusOneMonth->invert = true;
 $dateTime->add($minusOneMonth);
+
+$dateTime->setTimezone(new DateTimeZone("Asia/Jakarta"));
 var_dump($dateTime);
